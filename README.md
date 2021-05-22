@@ -1,8 +1,10 @@
 **Follow the below steps to install helm packages:**
 
-1. Add helm repo
+**Add helm repo in your repository list**
 
 helm3 repo add mediawikiapp https://rajasekaranr007.github.io/helm
+
+helm3 repo list 
 
 **Install mysql:**
 
