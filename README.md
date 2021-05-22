@@ -12,7 +12,7 @@ $helm repo update
 
 **Install mysql:**
 
-helm install mysql mediawikiapp/mysql -n my-namespace
+helm install mediawiki-mysql mediawikiapp/mysql -n my-namespace
 
 **Install mediawiki:**
 
