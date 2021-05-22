@@ -1,0 +1,17 @@
+k8s_ns:
+  name: mediawiki-ns
+image:
+  name: mysql
+  tag: "8.0.25"
+  port: 3306
+user:
+  root: "M3d1Aw1KiDataa1L0wAccess027"
+resources:
+    requests:
+      memory: "1048Mi"
+      cpu: "350m"
+    limits:
+      memory: "1050Mi"
+      cpu: "375m"
+replica:
+  count: 1

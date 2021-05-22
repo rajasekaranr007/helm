@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-wikiuser
+  namespace: {{ .Values.k8s_ns.name }}
+  labels:
+    app: {{ .Release.Name }}
+data:
+  wikiuser.sql: |
+    CREATE DATABASE IF NOT EXISTS wikidatabase;
+    CREATE USER IF NOT EXISTS 'wiki'@'%' IDENTIFIED BY 'Al10wW1kIm2N2Acc3sSDb';
+    GRANT ALL PRIVILEGES ON wikidatabase.* TO 'wiki'@'%';
+    GRANT ALTER, CREATE, DELETE, DROP, INDEX, INSERT, SELECT, UPDATE ON wikidatabase.* TO 'wiki'@'%';
+    FLUSH PRIVILEGES;
