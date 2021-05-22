@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-svc
+  namespace: {{ .Values.k8s_ns.name }}
+  labels:
+    app: {{ .Release.Name }}-app
+spec:
+  type: LoadBalancer
+  ports:
+  - port: {{ .Values.image.port.http }}
+    targetPort: {{ .Values.image.port.http }}
+    name: http
+  - port: {{ .Values.image.port.https }}
+    targetPort: {{ .Values.image.port.https }}
+    name: https
+  selector:
+    app: {{ .Release.Name }}-app

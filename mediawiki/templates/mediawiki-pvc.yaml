@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ .Release.Name }}-pv-claim
+  namespace: {{ .Values.k8s_ns.name }}
+  labels:
+    app: wordpress
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: {{ .Release.Name }}-data-sc
+  resources:
+    requests:
+      storage: 24Gi

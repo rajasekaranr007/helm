@@ -1,0 +1,29 @@
+k8s_ns:
+  name: mediawiki-ns
+image:
+  name: rajadevops07/mediawiki
+  tag: "1.0"
+  pullPolicy: "IfNotPresent"
+  port:
+    http: 80
+    https: 443
+wp_svc:
+  IP: "52.156.99.133"
+nodeaffinity:
+  key: "kubernetes.io/hostname"
+  value: "aks-agentpool-36719543-vmss000002"
+  weight: 100
+replica:
+  count: 1
+resources:
+    requests:
+      memory: "1048"
+      cpu: "545m"
+    limits:
+      memory: "1050Mi"
+      cpu: "550m"
+init:
+  image: mysql
+  tag: "8.0.25"
+mysql:
+  root: "TTNkMUF3MUtpRGF0YWExTDB3QWNjZXNzMDI3Cg=="
