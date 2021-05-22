@@ -23,6 +23,6 @@ Validate the resporces with kubectl command.
 kubectl get all -n my-namespace
 
 
-**Note: **
+**Note:**
   
   Here we are using PVC using Azur disks, if you are using other cloud you have to update PVC details.
