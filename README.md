@@ -14,3 +14,6 @@ helm install mediawikiapp/mysql --name=my-namespace
 
 helm install mediawikiapp/mediawiki --name=my-namespace
 
+Validate the resporces with kubectl command.
+
+kubectl get all -n my-namespace
