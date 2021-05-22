@@ -2,10 +2,18 @@ apiVersion: v1
 entries:
   mediawiki:
   - apiVersion: v1
-    created: "2021-05-22T14:29:07.5820423+05:30"
+    created: "2021-05-22T14:50:06.9543491+05:30"
     digest: 59ae09eb140ee4da1b99ea7beceb88e2dffd225b7d44b66ebb194300fed63c70
     name: mediawiki
     urls:
-    - https://github.com/rajasekaranr007/helm/mediawiki-1.0.0.tgz
+    - https://rajasekaranr007.github.io/helm/mediawiki-1.0.0.tgz
     version: 1.0.0
-generated: "2021-05-22T14:29:07.5719707+05:30"
+  mysql:
+  - apiVersion: v1
+    created: "2021-05-22T14:50:06.9563417+05:30"
+    digest: a052a9f585a904aedb462704de3b66f54c291f6afb9222a1e294af597d7fbe88
+    name: mysql
+    urls:
+    - https://rajasekaranr007.github.io/helm/mysql-1.0.0.tgz
+    version: 1.0.0
+generated: "2021-05-22T14:50:06.9523514+05:30"
